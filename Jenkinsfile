@@ -45,7 +45,7 @@ pipeline {
                 dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block
                     withEnv ( ['JENKINS_NODE_COOKIE=do_not_kill'] ){
-                        bat 'docker run -p 5000:5000 zollyzeus/mlproject'
+                        bat 'apprun.bat'
                     }
                 }
             }
