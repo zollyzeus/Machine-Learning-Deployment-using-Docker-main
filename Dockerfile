@@ -1,6 +1,5 @@
 #Mention the base image 
 #FROM continuumio/anaconda3:4.4.0
-
 FROM python:3.9
 
 #Copy the current folder structure and content to docker folder
