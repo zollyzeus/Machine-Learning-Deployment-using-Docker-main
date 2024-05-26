@@ -36,19 +36,6 @@ pipeline {
                     bat 'docker push zollyzeus/mlproject:latest'
                 }
             }
-        }
-        stage('Run image') {         
-            options {
-              timeout(time: 2, unit: 'MINUTES')   // timeout on this stage
-            }
-            steps {
-                dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
-                    // some block
-                    withEnv ( ['JENKINS_NODE_COOKIE=do_not_kill'] ){
-                        bat 'apprun.bat'
-                    }
-                }
-            }
-        }
+        }        
     }
 }
