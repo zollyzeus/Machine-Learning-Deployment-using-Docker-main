@@ -8,7 +8,7 @@ pipeline {
                     dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block
                     pwd()
-                    
+                    //bat 'docker stop $(docker ps -q)'
                 }
             }
         }
@@ -23,8 +23,7 @@ pipeline {
         stage('Build image') {         
             steps {
                 dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
-                    // some block
-                    //bat 'docker stop $(docker ps -q)'
+                    // some block                    
                     bat 'docker build -t zollyzeus/mlproject:latest .'
                 }
             }
