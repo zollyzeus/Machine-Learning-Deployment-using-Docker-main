@@ -3,16 +3,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Prep') {
+        stage('Init') {
             steps {
                     dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block
-                    pwd()
                     //bat 'docker stop $(docker ps -q)'
                 }
             }
         }
-        stage('Clone repository') {               
+        stage('Clone Git Repository') {               
             steps {
                 dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block
@@ -20,7 +19,7 @@ pipeline {
                 }
             }
         } 
-        stage('Build image') {         
+        stage('Build Docker Image') {         
             steps {
                 dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block                    
@@ -28,7 +27,7 @@ pipeline {
                 }
             }
         }   
-        stage('Push image') {         
+        stage('Push Docker Image') {         
             steps {       
                 dir('D:\\CDAC\\AI_Trends\\Docker_Projects\\Machine-Learning-Deployment-using-Docker-main') {
                     // some block
